@@ -1,5 +1,5 @@
 # Webpack WP theme Starter kit
-
+![Webpack Wordpress config](https://www.giuseppesurace.com/wp/wp-content/uploads/2017/11/screenshot-150x150.png "Webpack Wordpress Theme starter kit")
 ### Quick start
 ```shell
 # change directory to your wordpress themes folder
