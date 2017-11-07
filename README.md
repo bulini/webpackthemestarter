@@ -3,7 +3,6 @@
 ```shell
 brew install yarn
 ```
-- go to main folder and launch ```yarn install```
-- from same folder launch ```npm run watch```
+- go to your theme folder and launch ```yarn install```
+- from the same folder just launch ```npm run watch```
 - enjoy!
-

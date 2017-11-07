@@ -1,1 +1,1 @@
-console.log('ciao');
+console.log('Hello i am compiled!');

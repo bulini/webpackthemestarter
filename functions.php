@@ -1,32 +1,24 @@
 <?php
+/**********************************************************
+* enqueue your parent theme style if needed
+* in this case including twentyseventeen styles and scripts
+**********************************************************/
+add_action('wp_enqueue_scripts', 'twentyseventeen_enqueue_assets');
 
-/**
- * Storefront automatically loads the core CSS even if using a child theme as it is more efficient
- * than @importing it in the child theme style.css file.
- *
- * Uncomment the line below if you'd like to disable the Storefront Core CSS.
- *
- * If you don't plan to dequeue the Storefront Core CSS you can remove the subsequent line and as well
- * as the sf_child_theme_dequeue_style() function declaration.
- */
-//add_action( 'wp_enqueue_scripts', 'sf_child_theme_dequeue_style', 999 );
+function twentyseventeen_enqueue_assets() {
+  // enqueue style from your parent theme
+  wp_enqueue_style( 'twentyseventeen-style', get_template_directory_uri() . '/style.css' );
 
-/**
- * Dequeue the Storefront Parent theme core CSS
- */
-function sf_child_theme_dequeue_style() {
-    wp_dequeue_style( 'storefront-style' );
-    wp_dequeue_style( 'storefront-woocommerce-style' );
 }
 
-/**
- * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
- */
+/*********************************
+* enqueue your compiled bundle.js
+* and compiled style.css
+* defined in webpack.config.js
+*********************************/
+add_action( 'wp_enqueue_scripts', 'webpack_enqueue_assets' );
 
-//functions.php
-
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_scripts' );
-function my_theme_enqueue_scripts() {
-	wp_enqueue_script( 'bundle', get_stylesheet_directory_uri() . '/dist/bundle.js', array('jquery'), 1, false );
-
+function webpack_enqueue_assets() {
+  wp_enqueue_script( 'bundle', get_stylesheet_directory_uri() . '/dist/bundle.js', array('jquery'), 1, false );
+  wp_enqueue_style( 'webpacktheme-style', get_stylesheet_directory_uri() . '/style.css' );
 }
