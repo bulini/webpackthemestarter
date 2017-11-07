@@ -1,6 +1,6 @@
 # Webpack WP theme Starter kit
 
-###Quick start
+### Quick start
 ```shell
 # change directory to your wordpress themes folder
 $ cd themes
