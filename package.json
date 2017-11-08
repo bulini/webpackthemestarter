@@ -1,8 +1,8 @@
 {
-  "name": "storefront-child-theme-master",
+  "name": "webpack-wp-theme-starter",
   "version": "1.0.0",
-  "description": "The StoreFront Child Theme is a starter blank child theme for WooThemes StoreFront WooCommerce theme.",
-  "main": "index.js",
+  "description": "Quick starter and empty child theme ready with a basic config with Webpack to make something cool. You can change settings in webpack.config.js.",
+  "main": "main.js",
   "scripts": {
     "build": "webpack --color -d --display-error-details",
     "deploy": "NODE_ENV=production webpack -p --no-color",
