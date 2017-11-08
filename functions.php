@@ -19,6 +19,6 @@ function twentyseventeen_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'webpack_enqueue_assets' );
 
 function webpack_enqueue_assets() {
-  wp_enqueue_script( 'bundle', get_stylesheet_directory_uri() . '/dist/bundle.js', array('jquery'), 1, false );
+  wp_enqueue_script( 'bundle', get_stylesheet_directory_uri() . '/dist/main.js', array('jquery'), 1, false );
   wp_enqueue_style( 'webpacktheme-style', get_stylesheet_directory_uri() . '/style.css' );
 }

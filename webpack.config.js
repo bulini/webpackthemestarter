@@ -48,7 +48,7 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.(sass|scss)$/,
+        test: /\.(sass|scss|less)$/,
         include: [path.resolve(__dirname, './assets/sass'), path.resolve(__dirname, './')],
         loader: ExtractText.extract({
           fallback: 'style-loader',
@@ -58,9 +58,7 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 includePaths: [
-                  // path.resolve(__dirname, './node_modules/font-awesome/scss'),
-                  // path.resolve(__dirname, './node_modules/bourbon'),
-                  // path.resolve(__dirname, './node_modules/bourbon-neat')
+                  path.resolve(__dirname, './node_modules/bootstrap/scss')
                 ]
               }
             }
