@@ -58,7 +58,8 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 includePaths: [
-                  path.resolve(__dirname, './node_modules/bootstrap/scss')
+                  path.resolve(__dirname, './node_modules/bootstrap/scss'),
+                  path.resolve(__dirname, './node_modules/font-awesome/scss')
                 ]
               }
             }

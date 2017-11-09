@@ -5883,10 +5883,10 @@ a.text-dark:focus, a.text-dark:hover {
 /* Main colors variables */
 body {
   background: #AAAAAA;
-  color: #B10DC9; }
+  color: #111111; }
 
 p {
-  color: #B10DC9; }
+  color: #AAAAAA; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #39CCCC; }

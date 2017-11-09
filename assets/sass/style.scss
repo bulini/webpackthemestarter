@@ -16,6 +16,7 @@ You can change settings in webpack.config.js in order to change output files (cu
 
 @import "bootstrap";
 
+
 /* Main colors variables */
 $aqua:  #7FDBFF;
 $blue:  #0074D9;
@@ -39,11 +40,11 @@ $black:  #111111;
 
 body {
   background: $gray;
-  color: $purple;
+  color: $black;
 }
 
 p {
-  color: $purple;
+  color: $gray;
 }
 
 h1, h2, h3, h4, h5, h6 {

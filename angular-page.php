@@ -21,17 +21,31 @@ get_header(); ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-      <div class="alert alert-primary" role="alert">
-        Kush&Clouds meteo {{ meteo.name }}
+    <div class="alert alert-success" role="alert">
+     Angular Meteo
+    </div>
+
+    <div ng-controller="WeatherController as weather">
+      <p>Insert a city to get the Weather in real time.</p>
+
+      <form ng-submit="weather.addLocation()" class="form-inline">
+        <div class="form-group">
+          <input type="text" class="form-control-plaintext" ng-model="weather.where"  size="30" placeholder="Check location">
+        </div>
+        <button class="btn btn-success" type="submit">Check Weather</button>
+      </form>
+
+      <div ng-show="complete">
+        {{ dati_meteo }}
+        <img ng-src="{{ icon_url }}">
+
       </div>
+      
 
-      <div class="panel" ng-controller="WeatherController">
-
-        <ul class="list-unstyled">
-          <li ng-repeat="(k,v) in meteo.weather[0]">{{ k }} {{ v }}</li>
-        </ul>
-
+      <div>
+        <i class="fa fa-smile-o fa-5x"></i>
       </div>
+    </div>
 
 
     </main><!-- #main -->
