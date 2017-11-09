@@ -36,20 +36,34 @@ $maroon:  #85144B;
 $white:  #FFFFFF;
 $silver: #DDDDDD;
 $gray:   #AAAAAA;
+$lightgray: #f9f9f9;
 $black:  #111111;
 
 body {
-  background: $gray;
+  background: $white;
   color: $black;
 }
 
 p {
-  color: $gray;
+  color: $black;
+}
+
+.weatherform {
+  background: $lightgray;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $teal;
+  color: $blue;
 }
+
+.result {
+  .list-unstyled {
+    li {
+      font-weight: bold;
+    }
+  }
+}
+
 
 .done-true {
   text-decoration: line-through;

@@ -21,31 +21,43 @@ get_header(); ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-    <div class="alert alert-success" role="alert">
-     Angular Meteo
-    </div>
 
-    <div ng-controller="WeatherController as weather">
-      <p>Insert a city to get the Weather in real time.</p>
+      <div ng-controller="WeatherController as weather" class="row" ng-cloak>
 
-      <form ng-submit="weather.addLocation()" class="form-inline">
-        <div class="form-group">
-          <input type="text" class="form-control-plaintext" ng-model="weather.where"  size="30" placeholder="Check location">
+        <div class="card col-md-6 weatherform">
+          <div class="card-body">
+            <h4 class="card-title">Meteo</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Insert a city to get the Weather in real time.</h6>
+            <form ng-submit="weather.addLocation()" class="form-inline">
+              <div class="form-group mx-sm-3">
+                <input type="text" class="form-control" ng-keyup="check()" ng-model="weather.where"  placeholder="Check location">
+              </div>
+              <button class="btn btn-success btn-lg" type="submit">Check Weather</button>
+            </form>
+          </div>
         </div>
-        <button class="btn btn-success" type="submit">Check Weather</button>
-      </form>
 
-      <div ng-show="complete">
-        {{ dati_meteo }}
-        <img ng-src="{{ icon_url }}">
 
+        <div ng-show="complete" class="col-md-6 result">
+          <div class="media">
+            <img ng-src="<?php echo get_stylesheet_directory_uri(); ?>/img/{{ mood }}" alt="{{ mood }}" class="d-flex mr-3">
+            <div class="media-body">
+              <h5 class="mt-0">{{ city }}</h5>
+              <ul class="list-unstyled">
+                <li><img ng-src="{{ icon_url }}" alt="Card image cap" class="d-flex mr-3"></li>
+                <li><h5>Temp: {{ temp.toFixed(2) }}</h5></li>
+                <li>Min: {{ temp_min }}</li>
+                <li>Max: {{ temp_max }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div>
+          <i class="fa fa-smile-o fa-5x"></i>
+        </div>
       </div>
-      
-
-      <div>
-        <i class="fa fa-smile-o fa-5x"></i>
-      </div>
-    </div>
 
 
     </main><!-- #main -->

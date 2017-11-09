@@ -34,6 +34,9 @@ module.exports = {
     filename: "dist/[name].js"
   },
   resolve: {
+    // alias: {
+    //   angular: "angular/angular.min.js"
+    // },
     extensions: ['.js'],
     modules: [
       path.resolve(__dirname, './js'),
@@ -58,8 +61,7 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 includePaths: [
-                  path.resolve(__dirname, './node_modules/bootstrap/scss'),
-                  path.resolve(__dirname, './node_modules/font-awesome/scss')
+                  path.resolve(__dirname, './node_modules/bootstrap/scss')
                 ]
               }
             }
@@ -73,6 +75,12 @@ module.exports = {
       {
         test: /\.styl$/,
         use: [ "style-loader", "css-loader"]
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {compact : false}
       }
     ]
   },

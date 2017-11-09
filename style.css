@@ -5882,14 +5882,20 @@ a.text-dark:focus, a.text-dark:hover {
 
 /* Main colors variables */
 body {
-  background: #AAAAAA;
+  background: #FFFFFF;
   color: #111111; }
 
 p {
-  color: #AAAAAA; }
+  color: #111111; }
+
+.weatherform {
+  background: #f9f9f9; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #39CCCC; }
+  color: #0074D9; }
+
+.result .list-unstyled li {
+  font-weight: bold; }
 
 .done-true {
   text-decoration: line-through;
