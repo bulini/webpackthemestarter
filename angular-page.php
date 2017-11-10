@@ -53,10 +53,6 @@ get_header(); ?>
           </div>
         </div>
 
-
-        <div>
-          <i class="fa fa-smile-o fa-5x"></i>
-        </div>
       </div>
 
 
