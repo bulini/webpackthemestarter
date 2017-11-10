@@ -11,7 +11,7 @@ Angular.module('WeatherApp', [])
     //vars
     var where = weather.where
     var app_id = "fd5581745f97c7bcab5b5d80a837a808"
-    var url = "http://api.openweathermap.org/data/2.5/weather?q="+where+"&appid="+app_id
+    var url = "https://api.openweathermap.org/data/2.5/weather?q="+where+"&appid="+app_id
     //request
     $http.get(url)
     .then(function(response) {
